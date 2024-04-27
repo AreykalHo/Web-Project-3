@@ -1,5 +1,18 @@
+* {
+    box-sizing: border-box;
+    font-family: InstallFont;
+    font-weight: bolder;
+  }
+
+  @font-face {
+    font-family: InstallFont;
+    src: url(Morn-Thin.otf);
+    font-style: normal;
+  }
+  
 body {
-    font-family: sans-serif;
+    font-family: InstallFont;
+    color: #2a7c6f;
     margin: 2rem;
   }
   
