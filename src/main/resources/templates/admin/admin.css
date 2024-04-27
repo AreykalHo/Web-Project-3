@@ -21,9 +21,10 @@ body {
   }
   
   .order-container {
-    border: 1px solid #ddd;
+    border: 1px solid #2a7c6f;
     padding: 1rem;
     margin-bottom: 1rem;
+    /* text-align: center; */
   }
   
   .order-container h2,

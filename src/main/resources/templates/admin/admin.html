@@ -21,14 +21,13 @@
         <hr style="width: 100%" color="#2a7c6f" size="2px" />
       </div>
 
-      <h1>Order Approval</h1>
+      <h1>Order Approval (Order #<span th:text="${order.id}"></span>)</h1>
       <div class="order-container">
         <h2>Order Details</h2>
-        <p>Order ID: <span id="order-id"></span></p>
-        <p>Customer Name: <span id="customer-name"></span></p>
-        <p>Email: <span id="customer-email"></span></p>
-        <p>Billing Address: <span id="billing-address"></span></p>
-        <p>Shipping Address: <span id="shipping-address"></span></p>
+        <p>Customer Name: <span th:text="${order.customerName}"></span></p>
+        <p>Email: <span th:text="${order.customerEmail}"></span></p>
+        
+        <br>
         <h3>Order Items</h3>
         <table id="order-items">
           <thead>
@@ -39,7 +38,12 @@
             </tr>
           </thead>
           <tbody>
-            </tbody>
+            <tr th:each="item : ${order.items}">
+              <td th:text="${item.product}"></td>
+              <td th:text="${item.quantity}"></td>
+              <td th:text="'$' + ${item.price.toFixed(2)}"></td>
+            </tr>
+          </tbody>
         </table>
         <div class="buttons">
           <button id="approve-btn">Approve Order</button>
