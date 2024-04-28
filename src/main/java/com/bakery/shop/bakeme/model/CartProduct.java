@@ -1,10 +1,12 @@
 package com.bakery.shop.bakeme.model;
 
-import jakarta.persistence.*;
+import java.io.Serializable;
+
+import javax.persistence.*;
 
 @Entity
 @Table(name = "cart_product")
-public class CartProduct {
+public class CartProduct implements Serializable {
 
     @Id
     @Column(name = "cart_id", nullable = false)
