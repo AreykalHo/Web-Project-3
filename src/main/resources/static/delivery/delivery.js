@@ -113,9 +113,9 @@ takeForMeButton.addEventListener("click", () => {
   getLocation();
 });
 
-let btnPay = document.querySelector("#btn-pay");
-btnPay.onclick = () => {
-  window.location.href = "../checkout/checkout.html";
-};
+// let btnPay = document.querySelector("#btn-pay");
+// btnPay.onclick = () => {
+//   window.location.href = "../checkout/checkout.html";
+// };
 
 // getLocation();

@@ -31,4 +31,19 @@ public class AppController {
         return "login/login";
     }
 
+    @GetMapping("/delivery")
+    public String delivery() {
+        return "delivery/delivery";
+    }
+
+    @GetMapping("/checkout")
+    public String checkout() {
+        return "checkout/checkout";
+    }
+
+    @GetMapping("/ordercom")
+    public String ordercom() {
+        return "ordercom/ordercom";
+    }
+
 }

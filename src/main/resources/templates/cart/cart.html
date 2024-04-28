@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="cart/cart.css" />
     <link rel="icon" type="image/png" sizes="32x32" href="../images/icon.png" />
   </head>
+
   <body>
     <div id="header">
       <header>
@@ -65,11 +67,21 @@
           <div id="body-cart">
             <table id="list-cart">
               <tr class="body-cart-header">
-                <td><h3>Description</h3></td>
-                <td><h3>Brand</h3></td>
-                <td><h3>Quantity</h3></td>
-                <td><h3>Remove</h3></td>
-                <td><h3>Price</h3></td>
+                <td>
+                  <h3>Description</h3>
+                </td>
+                <td>
+                  <h3>Brand</h3>
+                </td>
+                <td>
+                  <h3>Quantity</h3>
+                </td>
+                <td>
+                  <h3>Remove</h3>
+                </td>
+                <td>
+                  <h3>Price</h3>
+                </td>
               </tr>
               <tr id="product-one" class="body-cart-product">
                 <td id="td-description">
@@ -79,7 +91,9 @@
                     <h5>Product code: AD34</h5>
                   </div>
                 </td>
-                <td><h4>MasterCook</h4></td>
+                <td>
+                  <h4>MasterCook</h4>
+                </td>
                 <td>
                   <div id="div-quantity-one">
                     <button id="minus-one">-</button>
@@ -104,7 +118,9 @@
                     <h5>Product code: AD45</h5>
                   </div>
                 </td>
-                <td><h4>MasterCook</h4></td>
+                <td>
+                  <h4>MasterCook</h4>
+                </td>
                 <td>
                   <div id="div-quantity-two">
                     <button id="minus-two">-</button>
@@ -146,7 +162,8 @@
 
           <!-- checkout div -->
           <div class="checkout-cart">
-            <button id="btn-checkout">CHECKOUT</button>
+            <button id="btn-checkout"><a th:href="@{/delivery}"
+                style="text-decoration: none; color: white;">CHECKOUT</a></button>
             <!-- <button id="logo-btn-checkout"></button> -->
           </div>
         </div>
@@ -165,4 +182,5 @@
 
     <script src="cart/cart.js"></script>
   </body>
+
 </html>

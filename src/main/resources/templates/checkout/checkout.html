@@ -61,10 +61,13 @@
 				</fieldset>
 				<fieldset class="conf-button">
 					<div class="flex-wrapper">
-						<button id="card" class="purchase"><span style="font-family: InstallFont">Confirm
-								purchase</span></button>
+						<button id="card" class="purchase"><span style="font-family: InstallFont">
+								<a th:href="@{/ordercom}" style="text-decoration: none;">Confirm Purchase</a>
+							</span></button>
 						<div class="or-element"><span>- or -<span></div>
-						<button id="cash" class="applepay"><span>By Cash</span></button>
+						<button id="cash" class="applepay">
+							<a th:href="@{/ordercom}" style="text-decoration: none;">Confirm Purchase</a>
+						</button>
 					</div>
 				</fieldset>
 				<!-- </form> -->
