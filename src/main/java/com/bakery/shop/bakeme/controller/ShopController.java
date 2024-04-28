@@ -19,6 +19,6 @@ public class ShopController {
     public String shop(Model model) {
         Iterable<Product> products = productService.getAllProducts();
         model.addAttribute("products", products);
-        return "shop";
+        return "shop/shop";
     }
 }
