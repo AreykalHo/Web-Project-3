@@ -46,4 +46,9 @@ public class AppController {
         return "ordercom/ordercom";
     }
 
+    @GetMapping("/admin")
+    public String admin() {
+        return "admin/admin";
+    }
+
 }

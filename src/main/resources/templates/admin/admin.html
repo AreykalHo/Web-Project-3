@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin</title>
-    <link rel="stylesheet" href="admin/admin.css" />
+    <link rel="stylesheet" href="/admin/admin.css" />
     <link rel="icon" type="image/png" sizes="32x32" href="../images/icon.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
   </head>
@@ -20,34 +20,36 @@
         <hr style="width: 100%" color="#2a7c6f" size="2px" />
       </div>
 
-      <h1>Order Approval (Order #<span th:text="${order.id}"></span>)</h1>
+      <h1>Order Approval Dashboard</h1>
       <div class="order-container">
-        <h2>Order Details</h2>
-        <p>Customer Name: <span th:text="${order.customerName}"></span></p>
-        <p>Email: <span th:text="${order.customerEmail}"></span></p>
-
-        <br>
-        <h3>Order Items</h3>
-        <table id="order-items">
+        <h1>All Orders</h1>
+        <table>
           <thead>
             <tr>
-              <th>Product</th>
-              <th>Quantity</th>
-              <th>Price</th>
+              <th>Order ID</th>
+              <th>Cart ID</th>
+              <th>Status</th>
+              <th>Actions</th>
             </tr>
           </thead>
           <tbody>
-            <tr th:each="item : ${order.items}">
-              <td th:text="${item.product}"></td>
-              <td th:text="${item.quantity}"></td>
-              <td th:text="'$' + ${item.price.toFixed(2)}"></td>
+            <tr th:each="order : ${orders}">
+              <td th:text="${order.id}"></td>
+              <td th:text="${order.cart.id}"></td>
+              <td th:text="${order.status}"></td>
+              <td>
+                <form action="/order/approve" method="post">
+                  <input type="hidden" name="id" th:value="${order.id}" />
+                  <button type="submit" id="approve-btn">Approve Order</button>
+                </form>
+                <form action="/order/reject" method="post">
+                  <input type="hidden" name="id" th:value="${order.id}" />
+                  <button type="submit" id="reject-btn">Reject Order</button>
+                </form>
+              </td>
             </tr>
           </tbody>
         </table>
-        <div class="buttons">
-          <button id="approve-btn">Approve Order</button>
-          <button id="reject-btn">Reject Order</button>
-        </div>
       </div>
       <script src="admin/admin.js"></script>
 

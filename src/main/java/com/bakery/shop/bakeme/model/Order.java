@@ -9,7 +9,7 @@ public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
-    private Long id;
+    private Long orderId;
 
     @ManyToOne
     @JoinColumn(name = "cart_id", referencedColumnName = "id", nullable = false)
@@ -20,11 +20,11 @@ public class Order {
 
     // Getters and Setters
     public Long getId() {
-        return id;
+        return orderId;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setId(Long orderId) {
+        this.orderId = orderId;
     }
 
     public Cart getCart() {
