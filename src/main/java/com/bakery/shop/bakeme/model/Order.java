@@ -3,7 +3,7 @@ package com.bakery.shop.bakeme.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "`order`") // 'order' is a reserved keyword in SQL, hence the backticks
+@Table(name = "`order`")
 public class Order {
 
     @Id

@@ -1,78 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" href="shop.css" />
-<link rel="icon" type="image/png" sizes="32x32" href="../images/icon.png" />
-<title>Shop (**th:text="${title}"**) </title>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 
-</head>
-<body>
-  <main>
-    <div id="header">
-      <header>
-        <h1>Freshly Baked</h1>
-      </header>
-      <hr style="width:100%" color="#2a7c6f" size="1px">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="shop.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/icon.png" />
+    <title th:text="${title}">Shop</title>
+  </head>
 
-      <div class="dropdown">
-        <button class="dropbtn">
-          <img src="../images/menuicon.png" alt="" />
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="../home/home.html">Home</a>
-          <a href="../shop/shop.html">Shop</a>
-          <a href="../cart/cart.html">Cart</a>
-          <a href="../contact/contact.html">Contact</a>
-          <a href="../team/team.html">Meet The Team</a>
+  <body>
+    <main>
+      <div id="header">
+        <header>
+          <h1>Freshly Baked</h1>
+        </header>
+        <hr style="width:100%" color="#2a7c6f" size="1px">
+
+        <div class="dropdown">
+          <button class="dropbtn">
+            <img src="../images/menuicon.png" alt="" />
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="../home/home.html">Home</a>
+            <a href="../shop/shop.html">Shop</a>
+            <a href="../cart/cart.html">Cart</a>
+            <a href="../contact/contact.html">Contact</a>
+            <a href="../team/team.html">Meet The Team</a>
+          </div>
+
         </div>
 
+        <nav>
+          <ul>
+            <li><a href="../home/home.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="../cart/cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+            <li><a href="../contact/contact.html">Contact</a></li>
+            <li><a href="../team/team.html">Meet The Team</a></li>
+          </ul>
+        </nav>
       </div>
 
-      <nav>
-        <ul>
-          <li><a href="../home/home.html">Home</a></li>
-          <li><a href="shop.html">Shop (**th:text="${title}"**)</a></li>
-          <li><a href="../cart/cart.html">Cart (<span id="cart-count">0</span>)</a></li>
-          <li><a href="../contact/contact.html">Contact</a></li>
-          <li><a href="../team/team.html">Meet The Team</a></li>
-        </ul>
-      </nav>
-    </div>
-
-    <div id="box">
-      <h2>Grand Opening</h2>
-      <div id="large">
-        <h1>Get 10% Off</h1>
-      </div>
-      <div>
-        <button id="button1">Order Now</button>
-      </div>
-    </div>
-
-    <div id="gallery">
-      <th:block th:each="product : ${products}">  
-        <div style="cursor: pointer" class="item5" onclick="addToCart('${product.id}')">
-          <img src="../images/" width="300" height="300" alt="Cookies">
-          <figcaption>
-            Chocolate Chips Cookie<br><br>$4.00
-          </figcaption>
+      <div id="box">
+        <h2>Grand Opening</h2>
+        <div id="large">
+          <h1>Get 10% Off</h1>
         </div>
-      </th:block>
-    </div>
+        <div>
+          <button id="button1">Order Now</button>
+        </div>
+      </div>
 
-  </main>
-  <script src="shop.js"></script>
-</body>
-<hr style="width:100%" color="#2a7c6f" size="2px">
-<footer>
-  <p>
-    Freshly Baked, Kilometer 6, 278H Street 201R Kroalkor Village, Sangkat,
-    Unnamed Road, Phnom Penh.
-  </p>
-  <p>&copy; 2022 Freshly Baked. All rights reserved.</p>
-</footer>
+      <div id="gallery">
+        <th:block th:each="product : ${products}">
+          <div style="cursor: pointer" class="item5" onclick="addToCart('${product.id}')">
+            <img th:src="${product.prodImg}" width="300" height="300" alt="Cookies">
+            <figcaption th:text="${product.prodName} + '<br><br>$' + ${product.prodPrice}">
+              Chocolate Chips Cookie<br><br>$4.00
+            </figcaption>
+          </div>
+        </th:block>
+      </div>
+
+    </main>
+    <script src="shop.js"></script>
+  </body>
+  <hr style="width:100%" color="#2a7c6f" size="2px">
+  <footer>
+    <p>
+      Freshly Baked, Kilometer 6, 278H Street 201R Kroalkor Village, Sangkat,
+      Unnamed Road, Phnom Penh.
+    </p>
+    <p>&copy; 2022 Freshly Baked. All rights reserved.</p>
+  </footer>
+
 </html>

@@ -3,8 +3,8 @@ package com.bakery.shop.bakeme.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "cart") // replace with your entity name
-public class Cart { // replace with your class name
+@Table(name = "cart")
+public class Cart {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
