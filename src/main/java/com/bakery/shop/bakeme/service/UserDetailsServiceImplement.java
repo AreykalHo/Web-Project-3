@@ -5,6 +5,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
+import com.bakery.shop.bakeme.model.User;
 import com.bakery.shop.bakeme.repository.UserRepository;
 
 public class UserDetailsServiceImplement implements UserDetailsService {
