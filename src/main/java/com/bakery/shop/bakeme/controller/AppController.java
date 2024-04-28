@@ -8,32 +8,27 @@ public class AppController {
 
     @GetMapping("/home")
     public String home() {
-        return "home";
+        return "home/home";
     }
-
-    // @GetMapping("/shop")
-    // public String shop() {
-    // return "shop";
-    // }
 
     @GetMapping("/cart")
     public String cart() {
-        return "cart";
+        return "cart/cart";
     }
 
     @GetMapping("/contact")
     public String contact() {
-        return "contact";
+        return "contact/contact";
     }
 
     @GetMapping("/team")
     public String team() {
-        return "team";
+        return "team/team";
     }
 
     @GetMapping("/login")
     public String login() {
-        return "login";
+        return "login/login";
     }
 
 }

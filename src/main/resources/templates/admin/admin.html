@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin</title>
-    <link rel="stylesheet" href="../admin/admin.css" />
+    <link rel="stylesheet" href="admin/admin.css" />
     <link rel="icon" type="image/png" sizes="32x32" href="../images/icon.png" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
   </head>
+
   <body>
     <main>
       <div id="header">
@@ -26,7 +25,7 @@
         <h2>Order Details</h2>
         <p>Customer Name: <span th:text="${order.customerName}"></span></p>
         <p>Email: <span th:text="${order.customerEmail}"></span></p>
-        
+
         <br>
         <h3>Order Items</h3>
         <table id="order-items">
@@ -50,8 +49,9 @@
           <button id="reject-btn">Reject Order</button>
         </div>
       </div>
-      <script src="admin.js"></script>
+      <script src="admin/admin.js"></script>
 
     </main>
-    </body>
-    </html>
+  </body>
+
+</html>

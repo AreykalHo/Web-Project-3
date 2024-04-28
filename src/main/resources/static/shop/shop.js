@@ -6,7 +6,7 @@ function addToCart() {
   document.getElementById("cart-count-2").innerHTML = cartCount;
 }
 
-let button1 = document.getElementById("button1");
-button1.onclick = function () {
-  window.location.href = "../cart/cart.html";
-};
+// let button1 = document.getElementById("button1");
+// button1.onclick = function () {
+//   window.location.href = "../cart/cart.html";
+// };

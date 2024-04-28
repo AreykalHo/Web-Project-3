@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="shop.css" />
+    <link rel="stylesheet" href="/shop/shop.css" />
     <link rel="icon" type="image/png" sizes="32x32" href="../images/icon.png" />
     <title th:text="${title}">Shop</title>
   </head>
@@ -49,7 +49,7 @@
           <h1>Get 10% Off</h1>
         </div>
         <div>
-          <button id="button1">Order Now</button>
+          <button id="button1"><a th:href="@{/cart}">Order Now</a></button>
         </div>
       </div>
 
@@ -57,15 +57,17 @@
         <th:block th:each="product : ${products}">
           <div style="cursor: pointer" class="item5" onclick="addToCart('${product.id}')">
             <img th:src="${product.prodImg}" width="300" height="300" alt="Cookies">
-            <figcaption th:text="${product.prodName} + '<br><br>$' + ${product.prodPrice}">
-              Chocolate Chips Cookie<br><br>$4.00
+            <figcaption th:utext="${product.prodName + ' <br/>$' + product.prodPrice}">
+              Chocolate Chips Cookie<br>$4.00
             </figcaption>
           </div>
         </th:block>
       </div>
 
+
+
     </main>
-    <script src="shop.js"></script>
+    <script src="shop/shop.js"></script>
   </body>
   <hr style="width:100%" color="#2a7c6f" size="2px">
   <footer>
