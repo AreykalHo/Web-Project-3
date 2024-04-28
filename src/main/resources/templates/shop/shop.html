@@ -17,32 +17,31 @@
           <h1>Freshly Baked</h1>
         </header>
         <hr style="width:100%" color="#2a7c6f" size="1px">
-
-      <div class="dropdown">
-        <button class="dropbtn">
-          <img src="../images/menuicon.png" alt="" />
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="../home/home.html">Home</a>
-          <a href="../shop/shop.html">Shop</a>
-          <a href="../cart/cart.html">Cart</a>
-          <a href="../contact/contact.html">Contact</a>
-          <a href="../team/team.html">Meet The Team</a>
+        <div class="dropdown">
+          <button class="dropbtn">
+            <img src="../images/menuicon.png" alt="" />
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a th:href="@{/home}">Home</a>
+            <a th:href="@{/shop}">Shop</a>
+            <a th:href="@{/cart}">Cart</a>
+            <a th:href="@{/contact}">Contact</a>
+            <a th:href="@{/team}">Meet The Team</a>
+          </div>
         </div>
 
-        </div>
-
-      <nav>
-        <ul>
-          <li><a href="../home/home.html">Home</a></li>
-          <li><a href="shop.html">Shop (**th:text="${title}"**)</a></li>
-          <li><a href="../cart/cart.html">Cart (<span id="cart-count">0</span>)</a></li>
-          <li><a href="../contact/contact.html">Contact</a></li>
-          <li><a href="../team/team.html">Meet The Team</a></li>
-        </ul>
-      </nav>
-    </div>
+        <nav>
+          <ul>
+            <li><a th:href="@{/home}">Home</a></li>
+            <li><a th:href="@{/shop}">Shop</a></li>
+            <li><a th:href="@{/cart}">Cart</a></li>
+            <li><a th:href="@{/contact}">Contact</a></li>
+            <li><a th:href="@{/team}">Meet The Team</a></li>
+            <li><a th:href="@{/login}">Login</a></li>
+          </ul>
+        </nav>
+      </div>
 
       <div id="box">
         <h2>Grand Opening</h2>
