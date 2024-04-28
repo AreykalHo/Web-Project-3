@@ -38,11 +38,11 @@
               <td th:text="${order.cart.id}"></td>
               <td th:text="${order.status}"></td>
               <td>
-                <form action="/order/approve" method="post">
+                <form action="/orders" method="post">
                   <input type="hidden" name="id" th:value="${order.id}" />
                   <button type="submit" id="approve-btn">Approve Order</button>
                 </form>
-                <form action="/order/reject" method="post">
+                <form action="/orders" method="post">
                   <input type="hidden" name="id" th:value="${order.id}" />
                   <button type="submit" id="reject-btn">Reject Order</button>
                 </form>
